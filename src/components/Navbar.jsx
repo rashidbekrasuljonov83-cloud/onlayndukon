@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 ">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl px-6 py-3 flex items-center justify-between text-white transition-all duration-300">
         <div className="text-xl font-bold tracking-wide bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent cursor-pointer">
-          Rashidbek
+          new products store
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link

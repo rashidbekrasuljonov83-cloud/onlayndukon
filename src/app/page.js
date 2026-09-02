@@ -3,6 +3,38 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: {
+    default: "CyanMart — Modern Glassmorphic E-Commerce Store",
+    template: "%s | CyanMart",
+  },
+  description:
+    "Explore top-quality products with a futuristic UI, fast delivery, and seamless shopping experience.",
+  keywords: [
+    "e-commerce",
+    "nextjs",
+    "online shop",
+    "electronics",
+    "groceries",
+    "cyanmart",
+  ],
+  authors: [{ name: "David" }],
+  openGraph: {
+    title: "CyanMart — Modern E-Commerce Experience",
+    description:
+      "Discover exclusive deals on tech, fashion, and home accessories in a sleek glassmorphism interface.",
+    url: "https://cyanmart.vercel.app", // Loyihangiz domenini qo'yasiz
+    siteName: "CyanMart",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CyanMart Store",
+    description:
+      "Next-gen shopping platform powered by Next.js and Tailwind CSS.",
+  },
+};
 export default async function Home({ searchParams }) {
   const params = await searchParams;
   const currentCategory = params?.category;
