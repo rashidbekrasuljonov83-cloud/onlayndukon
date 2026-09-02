@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link
             href="/"
-            className="flex items-center gap-2 text-black hover:text-cyan-400 transition-colors duration-200"
+            className="flex bg-gradient-to-r text-cyan-400 text-blue-500 bg-clip-text items-center gap-2 text-black hover:text-cyan-600 transition-colors duration-200"
           >
             <Home size={18} />
             <span>Home</span>
@@ -23,7 +23,7 @@ const Navbar = () => {
 
           <Link
             href="cart"
-            className="relative flex items-center gap-2 text-black hover:text-cyan-400 transition-colors duration-200"
+            className="relative bg-gradient-to-r text-cyan-400 text-blue-500 bg-clip-text flex items-center gap-2 text-black hover:text-cyan-600 transition-colors duration-200"
           >
             <ShoppingBag size={18} />
             Cart

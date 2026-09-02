@@ -1,6 +1,6 @@
 "use client";
-
-import React, { useState } from "react";
+import { CartContext } from "@/context/CartContext";
+import React, { useState, useContext } from "react";
 
 const ProductCard = ({ product }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -10,6 +10,7 @@ const ProductCard = ({ product }) => {
     (1 - product.discountPercentage / 100)
   ).toFixed(2);
 
+  const { addToCart } = useContext(CartContext);
   return (
     <div className="group relative w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-4 text-white shadow-xl hover:shadow-2xl hover:border-white/40 transition-all duration-300 flex flex-col justify-between">
       <div className="relative w-full h-52 rounded-xl overflow-hidden bg-black/20 flex items-center justify-center">
@@ -84,7 +85,10 @@ const ProductCard = ({ product }) => {
           )}
         </div>
 
-        <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-sm px-4 py-2 rounded-xl shadow-md active:scale-95 transition-all">
+        <button
+          onClick={() => addToCart(product)}
+          className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-sm px-4 py-2 rounded-xl shadow-md active:scale-95 transition-all"
+        >
           <svg
             className="w-4 h-4"
             fill="none"
