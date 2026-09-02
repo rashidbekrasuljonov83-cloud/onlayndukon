@@ -22,14 +22,6 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="categories"
-            className="flex items-center gap-2 text-black hover:text-cyan-400 transition-colors duration-200"
-          >
-            <Grid size={18} />
-            Categories
-          </Link>
-
-          <Link
             href="cart"
             className="relative flex items-center gap-2 text-black hover:text-cyan-400 transition-colors duration-200"
           >
@@ -60,14 +52,7 @@ const Navbar = () => {
             <Home size={20} />
             Home
           </Link>
-          <Link
-            href="#categories"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors"
-          >
-            <Grid size={20} />
-            Categories
-          </Link>
+
           <Link
             href="cart"
             onClick={() => setIsOpen(false)}
